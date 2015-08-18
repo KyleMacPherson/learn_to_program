@@ -1,3 +1,8 @@
 def dictionary_sort arr
-  # your code here
+  
+  arr.sort_by do |word|
+    word.downcase
+  end
+  
 end
+
