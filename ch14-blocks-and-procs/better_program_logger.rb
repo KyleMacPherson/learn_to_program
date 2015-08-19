@@ -1,20 +1,29 @@
+$depth = 0
+
 def log desc, &block
-  $space = " "
+
+  $space = "  " * $depth
   
-  puts "Beginning #{desc} ..."
+  puts $space + "Beginning #{desc} ..."
+  $depth += 1
   result = block.call
-  puts "{desc} finished, returning: #{result}"
+  $depth -= 1
+  puts $space + "#{desc} finished, returning: #{result}"
+  
 end
 
-log "outer block" do
-  log "some little block" do
-    5
+  log "outer block" do
+    log "some little block" do
+      log "some teeny tin blog" do
+        "lots of love"
+      end
+      42
+      log "yet another block" do
+      "I love indian food"
+      end
+    end
+    true
   end
   
-  log "yet another block" do
-  "I like thai food"
-  end
   
-  false
-
-end
+ 

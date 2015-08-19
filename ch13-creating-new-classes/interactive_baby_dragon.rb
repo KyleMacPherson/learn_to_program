@@ -1,35 +1,4 @@
 class Dragon
-  
-  def self.start_dragon_game
-
-  puts "What do you want to call your dragon?"
-  @name = gets.chomp
-  pet = Dragon.new @name
-
-  loop do
-    puts "Enter command: (feed, toss, walk, rock, put to bed, quit)"
-    command = gets.chomp.downcase
-
-    if command == "quit"
-      exit
-    elsif command == "feed"
-      pet.feed
-    elsif command == "toss" 
-      pet.toss
-    elsif command == "walk"
-      pet.walk
-    elsif command == "rock"
-      pet.rock
-    elsif command == "put to bed"
-      pet.put_to_bed
-    else
-      puts "Not a valid command"
-    end
-
-  end
-
-  end
-  end
 
   def initialize name
     @name = name
@@ -114,6 +83,8 @@ class Dragon
     @stuff_in_intestine = 0
     puts "Whoops! #{@name} had an accident..."
   end
+  
+end
   
   if hungry?
     if @asleep
