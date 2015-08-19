@@ -18,6 +18,8 @@ class Integer
 
   "#{"M" * m}" + "#{"D" * d}" + "#{"C" * c}" + "#{"L" * l}" + "#{"X" * x}" + "#{"V" * v}" + "#{"I" * i}"
 
+
+
   end
   
   def factorial
